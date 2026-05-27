@@ -1,0 +1,1019 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+   GLOBAL CSS
+=================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f3fff5;
+  overflow-x:hidden;
+  color:#1f2937;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+button{
+  border:none;
+  outline:none;
+  cursor:pointer;
+}
+
+.container{
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+/* ===================================
+   COMMON BUTTONS
+=================================== */
+
+.btn{
+  padding:16px 34px;
+  border-radius:14px;
+  background:linear-gradient(
+    135deg,
+    #16a34a,
+    #15803d
+  );
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  transition:0.3s ease;
+  box-shadow:0 10px 25px rgba(22,163,74,0.3);
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+}
+
+.outline-btn{
+  padding:16px 34px;
+  border-radius:14px;
+  border:2px solid #16a34a;
+  background:transparent;
+  color:#16a34a;
+  font-size:16px;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.outline-btn:hover{
+  background:#dcfce7;
+  transform:translateY(-5px);
+}
+
+/* ===================================
+   COMMON TITLES
+=================================== */
+
+.title{
+  text-align:center;
+  font-size:52px;
+  color:#0a4727;
+  margin-bottom:20px;
+  font-weight:800;
+}
+
+.subtitle{
+  text-align:center;
+  color:#555;
+  max-width:700px;
+  margin:auto;
+  margin-bottom:70px;
+  line-height:1.8;
+}
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+.navbar{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(12px);
+  box-shadow:0 5px 20px rgba(0,0,0,0.04);
+}
+
+.logo{
+  font-size:30px;
+  font-weight:800;
+  color:#16a34a;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.nav-links a{
+  color:#1f2937;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.nav-links a:hover{
+  color:#16a34a;
+}
+
+.nav-links .btn{
+  padding:12px 28px;
+}
+
+/* ===================================
+   HERO SECTION
+=================================== */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(
+    135deg,
+    #ecfff1 0%,
+    #ffffff 50%,
+    #d9ffe7 100%
+  );
+  padding:120px 0 80px;
+}
+
+/* BACKGROUND BLUR */
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:#22c55e33;
+  border-radius:50%;
+  filter:blur(120px);
+  top:-120px;
+  left:-120px;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:350px;
+  height:350px;
+  background:#16a34a22;
+  border-radius:50%;
+  filter:blur(120px);
+  bottom:-120px;
+  right:-120px;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  align-items:center;
+  gap:80px;
+  position:relative;
+  z-index:2;
+}
+
+/* LEFT CONTENT */
+
+.hero-left{
+  position:relative;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 22px;
+  border-radius:50px;
+  background:#dcfce7;
+  color:#15803d;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.hero-left h1{
+  font-size:75px;
+  line-height:1.05;
+  font-weight:800;
+  color:#111827;
+  margin-bottom:25px;
+}
+
+.hero-left h1 span{
+  color:#16a34a;
+}
+
+.hero-left p{
+  font-size:18px;
+  line-height:1.9;
+  color:#4b5563;
+  max-width:580px;
+}
+
+/* HERO BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  margin-top:40px;
+  flex-wrap:wrap;
+}
+
+/* HERO STATS */
+
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:55px;
+}
+
+.hero-stats div{
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(10px);
+  border-radius:24px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+  transition:0.3s ease;
+}
+
+.hero-stats div:hover{
+  transform:translateY(-8px);
+}
+
+.hero-stats h3{
+  font-size:32px;
+  color:#16a34a;
+  margin-bottom:10px;
+}
+
+.hero-stats p{
+  color:#6b7280;
+  font-size:14px;
+}
+
+/* RIGHT CONTENT */
+
+.hero-right{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* HERO IMAGE */
+
+.hero-right img{
+  max-width:470px;
+  z-index:2;
+  animation:floatImage 4s ease-in-out infinite;
+  filter:drop-shadow(
+    0 20px 35px rgba(0,0,0,0.15)
+  );
+}
+
+/* GLASS CARDS */
+
+.glass-card{
+  position:absolute;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
+  padding:16px 24px;
+  border-radius:20px;
+  font-weight:600;
+  color:#1f2937;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  z-index:3;
+}
+
+.card1{
+  top:40px;
+  left:0;
+}
+
+.card2{
+  bottom:40px;
+  right:0;
+}
+
+/* ===================================
+   GREEN FLOWERS
+=================================== */
+
+.flower{
+  position:absolute;
+  z-index:1;
+  opacity:0.8;
+  user-select:none;
+}
+
+.flower1{
+  top:100px;
+  left:40px;
+  font-size:45px;
+  color:#22c55e;
+  animation:flowerMove 5s ease-in-out infinite;
+}
+
+.flower2{
+  bottom:120px;
+  left:120px;
+  font-size:38px;
+  color:#16a34a;
+  animation:flowerMove2 6s ease-in-out infinite;
+}
+
+.flower3{
+  top:120px;
+  right:80px;
+  font-size:50px;
+  color:#4ade80;
+  animation:flowerMove 4s ease-in-out infinite;
+}
+
+/* ===================================
+   FEATURES SECTION
+=================================== */
+
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.feature-card{
+  background:white;
+  padding:40px;
+  border-radius:30px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s ease;
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+}
+
+.feature-icon{
+  font-size:60px;
+  color:#16a34a;
+  margin-bottom:20px;
+}
+
+.feature-card h3{
+  margin-bottom:15px;
+  color:#0a4727;
+}
+
+.feature-card p{
+  color:#555;
+  line-height:1.8;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.service-card,
+.stat-card,
+.contact-card{
+  background:white;
+  padding:35px;
+  border-radius:30px;
+  box-shadow:0 18px 45px rgba(0,0,0,0.08);
+  transition:0.3s ease;
+}
+
+.service-card:hover,
+.stat-card:hover,
+.contact-card:hover{
+  transform:translateY(-10px);
+}
+
+.service-icon{
+  font-size:50px;
+  color:#16a34a;
+  margin-bottom:20px;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.count-number{
+  font-size:56px;
+  color:#16a34a;
+  margin-bottom:15px;
+}
+
+.faq-list{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  gap:18px;
+}
+
+.faq-item{
+  border-radius:26px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+}
+
+.faq-item.active{
+  box-shadow:0 18px 45px rgba(22,163,74,0.16);
+}
+
+.faq-question{
+  width:100%;
+  text-align:left;
+  padding:24px;
+  font-size:18px;
+  color:#111827;
+  background:transparent;
+  cursor:pointer;
+  border:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease, padding 0.4s ease;
+  padding:0 24px;
+}
+
+.faq-item.active .faq-answer{
+  max-height:260px;
+  padding:18px 24px 24px;
+}
+
+.faq-answer p{
+  color:#4b5563;
+  line-height:1.8;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:30px;
+  margin-top:40px;
+}
+
+.contact-card h3{
+  margin-bottom:18px;
+  color:#0a4727;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+  width:100%;
+}
+
+.contact-form textarea{
+  min-height:180px;
+}
+
+.summary-card{
+  margin-top:30px;
+  padding:30px;
+  border-radius:24px;
+  background:#f0fdf4;
+  border:1px solid #d1fae5;
+  box-shadow:0 12px 30px rgba(22,163,74,0.12);
+}
+
+.summary-card h3{
+  margin-bottom:18px;
+  color:#0a4727;
+}
+
+/* ===================================
+   SIGNUP SECTION
+=================================== */
+
+.signup-box{
+  max-width:700px;
+  margin:auto;
+  background:white;
+  padding:50px;
+  border-radius:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.signup-box h2{
+  text-align:center;
+  margin-bottom:30px;
+  color:#0a4727;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,
+textarea{
+  padding:18px;
+  border-radius:15px;
+  border:1px solid #ddd;
+  font-size:16px;
+  transition:0.3s ease;
+}
+
+input:focus,
+textarea:focus{
+  border-color:#16a34a;
+  outline:none;
+  box-shadow:0 0 0 4px rgba(22,163,74,0.15);
+}
+
+textarea{
+  min-height:150px;
+  resize:none;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer{
+  background:#0a4727;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.footer p{
+  opacity:0.9;
+  line-height:1.8;
+}
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes floatImage{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-18px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+@keyframes flowerMove{
+
+  0%{
+    transform:translateY(0px) rotate(0deg);
+  }
+
+  50%{
+    transform:translateY(-18px) rotate(8deg);
+  }
+
+  100%{
+    transform:translateY(0px) rotate(0deg);
+  }
+
+}
+
+@keyframes flowerMove2{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(18px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media(max-width:992px){
+
+  .hero-content{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-left h1{
+    font-size:58px;
+  }
+
+  .hero-left p{
+    margin:auto;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-stats{
+    grid-template-columns:1fr;
+  }
+
+  .hero-right{
+    margin-top:40px;
+  }
+
+  .glass-card{
+    position:relative;
+    margin:10px auto;
+  }
+
+  .card1,
+  .card2{
+    top:auto;
+    bottom:auto;
+    left:auto;
+    right:auto;
+  }
+
+  .features-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services-grid,
+  .stats-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+}
+
+@media(max-width:768px){
+
+  section{
+    padding:80px 0;
+  }
+
+  .title{
+    font-size:38px;
+  }
+
+  .hero{
+    padding-top:100px;
+  }
+
+  .hero-left h1{
+    font-size:44px;
+  }
+
+  .hero-left p{
+    font-size:16px;
+  }
+
+  .hero-right img{
+    max-width:320px;
+  }
+
+  .navbar{
+    padding:18px 5%;
+  }
+
+  .nav-links{
+    gap:16px;
+  }
+
+  .contact-grid,
+  .services-grid,
+  .stats-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .hero-left h1{
+    font-size:36px;
+  }
+
+  .btn,
+  .outline-btn{
+    width:100%;
+  }
+
+  .hero-stats div{
+    padding:20px;
+  }
+
+  .flower1,
+  .flower2,
+  .flower3{
+    font-size:30px;
+  }
+
+  .signup-box{
+    padding:30px 20px;
+  }
+
+  .nav-links{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .contact-grid,
+  .services-grid,
+  .stats-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+
+
+
+/* ////////////// */
+
+
+/* =========================
+   GIANT ECO PLANT
+========================= */
+
+.giant-plant{
+  position:relative;
+  width:400px;
+  height:600px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:plantFloat 5s ease-in-out infinite;
+}
+
+/* GLOW */
+
+.plant-glow{
+  position:absolute;
+  width:280px;
+  height:280px;
+  background:#22c55e33;
+  border-radius:50%;
+  filter:blur(90px);
+  bottom:120px;
+}
+
+/* STEM */
+
+.plant-stem{
+  position:absolute;
+  width:20px;
+  height:420px;
+  background:linear-gradient(
+    to bottom,
+    #4ade80,
+    #15803d
+  );
+  border-radius:40px;
+  bottom:40px;
+  z-index:2;
+  box-shadow:
+    0 10px 30px rgba(34,197,94,0.25);
+}
+
+/* LEAVES */
+
+.plant-leaf{
+  position:absolute;
+  width:140px;
+  height:80px;
+  background:linear-gradient(
+    135deg,
+    #4ade80,
+    #16a34a
+  );
+  border-radius:140px 0;
+  box-shadow:
+    0 12px 25px rgba(34,197,94,0.25);
+  z-index:3;
+}
+
+/* LEFT TOP */
+
+.leaf-1{
+  left:40px;
+  top:140px;
+  transform:rotate(-35deg);
+  animation:leftLeaf 4s ease-in-out infinite;
+}
+
+/* RIGHT TOP */
+
+.leaf-2{
+  right:40px;
+  top:190px;
+  transform:rotate(145deg);
+  animation:rightLeaf 4s ease-in-out infinite;
+}
+
+/* LEFT BOTTOM */
+
+.leaf-3{
+  left:50px;
+  bottom:180px;
+  transform:rotate(-25deg);
+  animation:leftLeaf 5s ease-in-out infinite;
+}
+
+/* RIGHT BOTTOM */
+
+.leaf-4{
+  right:50px;
+  bottom:120px;
+  transform:rotate(155deg);
+  animation:rightLeaf 5s ease-in-out infinite;
+}
+
+/* TOP LEAF */
+
+.top-main-leaf{
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+  );
+  border-radius:140px 0;
+  top:20px;
+  transform:rotate(45deg);
+  z-index:4;
+  box-shadow:
+    0 12px 30px rgba(34,197,94,0.3);
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes plantFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-18px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* LEFT LEAF */
+
+@keyframes leftLeaf{
+
+  0%{
+    transform:rotate(-35deg);
+  }
+
+  50%{
+    transform:rotate(-28deg);
+  }
+
+  100%{
+    transform:rotate(-35deg);
+  }
+
+}
+
+/* RIGHT LEAF */
+
+@keyframes rightLeaf{
+
+  0%{
+    transform:rotate(145deg);
+  }
+
+  50%{
+    transform:rotate(152deg);
+  }
+
+  100%{
+    transform:rotate(145deg);
+  }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .giant-plant{
+    width:300px;
+    height:450px;
+  }
+
+  .plant-stem{
+    height:320px;
+  }
+
+  .plant-leaf{
+    width:100px;
+    height:60px;
+  }
+
+  .top-main-leaf{
+    width:90px;
+    height:90px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .giant-plant{
+    width:240px;
+    height:380px;
+  }
+
+  .plant-stem{
+    height:260px;
+    width:14px;
+  }
+
+  .plant-leaf{
+    width:80px;
+    height:50px;
+  }
+
+  .top-main-leaf{
+    width:70px;
+    height:70px;
+  }
+
+}
